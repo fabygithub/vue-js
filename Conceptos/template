@@ -1,16 +1,31 @@
-
 <!-- Use preprocessors via the lang attribute! e.g. <template lang="pug"> -->
 <template>
-  
-    
-    
+  <div id="app">
+    <h1>{{message}}</h1>
+    <h1>Firstname : {{firstname}}</h1>
+    <h1>Lastname : {{lastname}}</h1>
+     <div v-html = "htmlcontent"></div>
+    <p>
+      Learn more with the
+      <a
+        href="https://vuejs.org/"
+        target="_blank"
+        rel="noopener"
+      >Vue Docs &amp; Resources</a>.
+    </p>
+
+    <button @click="doSomething">Say hello.</button>
+  </div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      message: 'Welcome to Vue!'
+      message: 'Welcome to Vue!',
+      firstname : "Ria",
+      lastname  : "Singh",
+       htmlcontent : "<div><h1>Vue Js Template</h1></div>"
     };
   },
   methods: {
@@ -43,4 +58,3 @@ button {
   padding: 0.75em 2em;
 }
 </style>
-
